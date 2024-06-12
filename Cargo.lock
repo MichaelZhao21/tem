@@ -238,6 +238,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "glib-build-tools"
+version = "0.19.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "108f374fff60efd14b0d70d8916e7213aed18d7dd071ba3e9334ed2dac1dc86a"
+dependencies = [
+ "gio",
+]
+
+[[package]]
 name = "glib-macros"
 version = "0.19.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -582,6 +591,7 @@ checksum = "e1fc403891a21bcfb7c37834ba66a547a8f402146eba7265b5a6d88059c9ff2f"
 name = "tem"
 version = "0.1.0"
 dependencies = [
+ "glib-build-tools",
  "gtk4",
 ]
 

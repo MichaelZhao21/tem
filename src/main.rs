@@ -1,9 +1,16 @@
-use gtk::{glib, Application, ApplicationWindow, Button};
+mod window;
+
+use gtk::{glib, gio, Application};
+use window::Window;
 use gtk::prelude::*;
 
 const APP_ID: &str = "xyz.michaelzhao.tem";
 
 fn main() -> glib::ExitCode {
+    // Register and include resources
+    gio::resources_register_include!("resources.gresource")
+        .expect("Failed to register resources.");
+    
     // Create a new app
     let app = Application::builder().application_id(APP_ID).build();
 
@@ -15,28 +22,7 @@ fn main() -> glib::ExitCode {
 }
 
 fn build_ui(app: &Application) {
-    // Create a button with label and margins
-    let button = Button::builder()
-        .label("Press me!")
-        .margin_top(12)
-        .margin_bottom(12)
-        .margin_start(12)
-        .margin_end(12)
-        .build();
-
-    // Connect to "clicked" signal of `button`
-    button.connect_clicked(|button| {
-        // Set the label to "Hello World!" after the button has been clicked on
-        button.set_label("Hello World!");
-    });
-
-    // Create a window and set the title
-    let window = ApplicationWindow::builder()
-        .application(app)
-        .title("tem")
-        .child(&button)
-        .build();
-
-    // Present window
+    // Create a window and present it
+    let window = Window::new(app);
     window.present();
 }
