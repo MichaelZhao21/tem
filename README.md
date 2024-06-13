@@ -10,6 +10,10 @@ Although there are solutions out there (Google Drive, Obsidian, Vi), none of the
 - GTK4
 - [gtk-rs](https://gtk-rs.org/gtk4-rs/stable/latest/book/introduction.html)
 
+## Current Features
+- A window opens!
+- Layout is getting laid... wait that's not-
+
 ## Future Features
 
 MVP

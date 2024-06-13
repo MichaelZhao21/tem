@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
+    <requires lib="gtk" version="4.0" />
     <template class="TemAppWindow" parent="GtkApplicationWindow">
         <property name="title">tem</property>
         <child>
-            <object class="GtkButton" id="button">
-                <property name="label">Press me!</property>
-                <property name="margin-top">12</property>
-                <property name="margin-bottom">12</property>
-                <property name="margin-start">12</property>
-                <property name="margin-end">12</property>  
+            <object class="GtkBox" id="contentBox">
+                <child>
+                    <object class="GtkBox" id="leftPane">
+                        <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                        <child>
+                            <object class="GtkButton" id="button">
+                                <property name="label">Press me!</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkButton" id="button1">
+                                <property name="label">I don't do anything smh</property>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkBox" id="rightPane">
+                        <property name="hexpand">true</property>
+                        <property name="vexpand">true</property>
+                        <child>
+                            <object class="MarkdownEditor" id="editor"></object>
+                        </child>
+                    </object>
+                </child>
             </object>
         </child>
     </template>

@@ -2,5 +2,6 @@
 <gresources>
     <gresource prefix="/xyz/michaelzhao/tem/">
         <file compressed="true" preprocess="xml-stripblanks">window.ui</file>
+        <file compressed="true" preprocess="xml-stripblanks">markdown-editor.ui</file>
     </gresource>
 </gresources>

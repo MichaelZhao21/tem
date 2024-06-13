@@ -1,4 +1,5 @@
 mod window;
+mod markedit;
 
 use gtk::{glib, gio, Application};
 use window::Window;

@@ -3,12 +3,17 @@ use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::{glib, Button, CompositeTemplate};
 
+use crate::markedit::MarkdownEditor;
+
 // Object holding the state
 #[derive(CompositeTemplate, Default)]
 #[template(resource = "/xyz/michaelzhao/tem/window.ui")]
 pub struct Window {
     #[template_child]
     pub button: TemplateChild<Button>,
+
+    #[template_child]
+    pub editor: TemplateChild<MarkdownEditor>,
 }
 
 // The central trait for subclassing a GObject
@@ -39,6 +44,9 @@ impl ObjectImpl for Window {
             // Set the label to "Hello World!" after the button has been clicked on
             button.set_label("Hello World!");
         });
+
+        // Fill editor text with something
+        self.editor.buffer().set_text("hello world!!!");
     }
 }
 
