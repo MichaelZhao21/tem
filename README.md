@@ -4,19 +4,27 @@ I wanted to build my own system for markdown text editing. I didn't want to rely
 
 Although there are solutions out there (Google Drive, Obsidian, Vi), none of them were perfectly suited to my use case (Obsidian came close but it isn't open source sad face).
 
-## Tech used
+## Setup and Execution
+
+You must have GTK4 installed! This varies in difficulty, but shouldn't be too bad on Linux/macOS. See the [gtk-rs book's installation guide](https://gtk-rs.org/gtk4-rs/stable/latest/book/installation.html) for details.
+
+Then just run `cargo run` to test the app!
+
+## Details
+
+### Tech used
 
 - Rust
 - GTK4
 - [gtk-rs](https://gtk-rs.org/gtk4-rs/stable/latest/book/introduction.html)
 
-## Current Features
+### Current Features
 - A window opens!
 - Layout is getting laid... wait that's not-
 
-## Future Features
+### Future Features
 
-MVP
+**MVP**
 - File manager
 - Tagging system
 - Text editor
@@ -25,9 +33,8 @@ MVP
 - Local storage method
 - External repo syncing
 
-Future Goals
+**Future Goals**
 - Thin client — edit files remotely
 - Support for images
 - Sharing files with others — readonly web view
 - Multiline editing
-
