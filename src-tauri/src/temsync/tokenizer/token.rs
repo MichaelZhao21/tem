@@ -17,4 +17,8 @@ impl Token {
     pub fn new_with_values(start: usize, len: usize, value: String) -> Self {
         Token { start, len, value }
     }
+
+    pub fn eq_value(&self, b: &Token) -> bool {
+        self.value == b.value
+    }
 }

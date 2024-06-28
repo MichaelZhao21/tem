@@ -34,7 +34,9 @@ To start, we need to figure out how to create diffs/patch files from the changed
 ### Current Features
 
 - A window opens!
-- (temsync) Parsing tokens from file
+- temsync
+    - Parsing tokens from file (word-based)
+    - Create diff of 2 sets of tokens using Meyer's Diff Algo
 
 ### Future Features
 

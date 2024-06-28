@@ -2,7 +2,7 @@ mod token;
 
 use std::{error::Error, fs::File, io::Read, path::PathBuf};
 
-use token::Token;
+pub use token::Token;
 
 const ZERO: u8 = 48; // 0 ascii code
 const NINE: u8 = 57; // 9 ascii code
@@ -11,7 +11,7 @@ const CAP_Z: u8 = 90; // Capital Z ascii code
 const LOW_A: u8 = 97; // Lowercase A ascii code
 const LOW_Z: u8 = 122; // Lowercase Z ascii code
 
-/// Parses the given file, pushing the file's tokens onto the "tokens" instance variable attribute
+/// Parses the given file, returning a vector of Tokens
 pub fn parse_file_tokens(filename: &str) -> Result<Vec<Token>, Box<dyn Error>> {
     // Open the file
     let mut f = File::open(PathBuf::from(filename))?;
@@ -87,5 +87,16 @@ mod tests {
         for (i, token) in expected_tokens.iter().enumerate() {
             assert!(tokens[i] == *token, "token {} is invalid, expected [{}]", i, token.value);
         }
+    }
+
+    /// To see this result, use the command cargo test -- --nocapture
+    #[test]
+    fn test_tokenizer_complex() {
+        // Instantiate tokenizer
+        let tokens = parse_file_tokens("./src/temsync/test-files/complex-tokens".into())
+            .expect("tokenizer parse_file failed");
+
+        // Print tokens
+        println!("{:?}", tokens);
     }
 }
