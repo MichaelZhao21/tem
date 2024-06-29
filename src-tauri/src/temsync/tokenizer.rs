@@ -1,8 +1,6 @@
-mod token;
-
 use std::{error::Error, fs::File, io::Read, path::PathBuf};
 
-pub use token::Token;
+use super::token::Token;
 
 const ZERO: u8 = 48; // 0 ascii code
 const NINE: u8 = 57; // 9 ascii code

@@ -1,11 +1,9 @@
 use meyers::get_diff;
 
-#[cfg(test)]
-mod tests;
-
+mod token;
 mod tokenizer;
+mod edit;
 mod meyers;
-mod diffengine;
 
 pub fn main() {
     let a = tokenizer::parse_file_tokens("").expect("parsing should work!");

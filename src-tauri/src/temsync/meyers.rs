@@ -1,7 +1,7 @@
-mod edit;
-
-use super::tokenizer::Token;
-use edit::{Edit, EditType};
+use super::{
+    edit::{Edit, EditType},
+    token::Token,
+};
 
 /// Use the Meyer's diffing algorithm to find all edits required to get from
 /// the prev to curr file state. See the algorithm here:

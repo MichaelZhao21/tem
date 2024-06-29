@@ -1,4 +1,4 @@
-use crate::temsync::tokenizer::Token;
+use super::token::Token;
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum EditType {
