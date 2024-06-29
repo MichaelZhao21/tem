@@ -116,11 +116,29 @@ fn backtrack(trace: &Vec<Vec<usize>>, n: usize, m: usize) -> Vec<Move> {
 
         (x, y) = (prev_x, prev_y);
 
-        // At the end, push move from 0,0 to first spot
-        if d == 1 {
-            path.push(Move::new(0, 0, prev_x, prev_y));
+        // If we reach (0, 0) break
+        // Otherwise, if we reach the end (d = 1), then go diagonally down to (0, 0)
+        if x == 0 && y == 0 {
+            break;
+        } else if d == 1 {
+            // This should never happen
+            if x != y {
+                panic!("invalid state for backtracking -- x and y should match");
+            }
+
+            // Diagonal steps back to 0,0
+            while x > 0 {
+                path.push(Move::new(x - 1, y - 1, x, y));
+                (x, y) = (x - 1, y - 1);
+            }
             break;
         }
+
+        // At the end, push move from 0,0 to first spot
+        // if d == 1 {
+        //     path.push(Move::new(0, 0, prev_x, prev_y));
+        //     break;
+        // }
     }
 
     // Return reversed path
@@ -133,14 +151,31 @@ fn gen_edits(path: &Vec<Move>, prev: &Vec<Token>, curr: &Vec<Token>) -> Vec<Edit
 
     // Reverse loop through backtrack
     for m in path.iter().rev() {
-        println!("{:?}", m);
         // Figure out if it was a deletion, addition, or unchanged
         if m.x == m.prev_x {
-            push_or_combine(&mut out, EditType::INSERT, &curr[m.prev_y], m.x, m.y);
+            push_or_combine(
+                &mut out,
+                EditType::INSERT,
+                &curr[m.prev_y],
+                m.prev_x,
+                m.prev_y,
+            );
         } else if m.y == m.prev_y {
-            push_or_combine(&mut out, EditType::DELETE, &prev[m.prev_x], m.x, m.y);
+            push_or_combine(
+                &mut out,
+                EditType::DELETE,
+                &prev[m.prev_x],
+                m.prev_x,
+                m.prev_y,
+            );
         } else {
-            push_or_combine(&mut out, EditType::SAME, &prev[m.prev_x], m.x, m.y)
+            push_or_combine(
+                &mut out,
+                EditType::SAME,
+                &prev[m.prev_x],
+                m.prev_x,
+                m.prev_y,
+            )
         }
     }
 
