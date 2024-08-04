@@ -1,0 +1,36 @@
+-6,5#Generator
++6,6#Creator
+-21,20#Generator
++21,21#Creator
+-79,78#Generator
++79,79#Creator
+-83,82#a
++83,83#an
+-85,84#sophisticated
++85,85#advanced
+-134,133#pattern
++134,134#structure
+-186,185#choose
++186,186#select
+-224,223#on the go
++228,224#effortlessly
+-248,243#Generator
++248,244#Creator
+-302,297#generator
++302,298#creator
+-349,344#generator
++349,345#creator
+-814,809#generator
++814,810#creator
++821,818#  
+-845,842#generator
++845,843#creator
++850,849#  
+-876,875#themes`               | Directory containing theme files    |\n| `
+-994,958#Create a new branch**:\n   ```sh\n   git checkout -b feature-branch\n   ```\n3. **
+-1081,1000#4
++1081,1001#3
+-1125,1044#5
++1125,1045#4
+-1213,1132#Generator
++1213,1133#Creator

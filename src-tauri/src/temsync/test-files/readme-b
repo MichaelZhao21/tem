@@ -74,7 +74,6 @@ The project directory structure is as follows:
 | `generate_haiku.py`    | Main script to generate haikus      |
 | `haiku_creator`        | Package containing core logic       |
 | `haiku_creator/ai.py`  | AI model implementation             |
-| `themes`               | Directory containing theme files    |
 | `requirements.txt`     | List of dependencies                |
 
 ## Contributing
@@ -82,19 +81,15 @@ The project directory structure is as follows:
 We welcome contributions from the community! To contribute:
 
 1. **Fork the repository** on GitHub.
-2. **Create a new branch**:
-   ```sh
-   git checkout -b feature-branch
-   ```
-3. **Commit your changes**:
+2. **Commit your changes**:
    ```sh
    git commit -m "Add new feature"
    ```
-4. **Push to the branch**:
+3. **Push to the branch**:
    ```sh
    git push origin feature-branch
    ```
-5. **Create a Pull Request** on GitHub.
+4. **Create a Pull Request** on GitHub.
 
 ## License
 

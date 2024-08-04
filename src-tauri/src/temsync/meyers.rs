@@ -133,12 +133,6 @@ fn backtrack(trace: &Vec<Vec<usize>>, n: usize, m: usize) -> Vec<Move> {
             }
             break;
         }
-
-        // At the end, push move from 0,0 to first spot
-        // if d == 1 {
-        //     path.push(Move::new(0, 0, prev_x, prev_y));
-        //     break;
-        // }
     }
 
     // Return reversed path

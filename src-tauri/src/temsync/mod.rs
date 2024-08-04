@@ -4,6 +4,7 @@ mod token;
 mod tokenizer;
 mod edit;
 mod meyers;
+mod patch;
 
 pub fn main() {
     let a = tokenizer::parse_file_tokens("").expect("parsing should work!");

@@ -9,8 +9,8 @@ pub struct Token {
 }
 
 impl Token {
-    pub fn new(start: usize, seq: &[u8]) -> Result<Self, Box<dyn Error>> {
-        Ok(Token { start, len: seq.len(), value: str::from_utf8(seq)?.to_owned() })
+    pub fn new(start: usize, seq: &str) -> Result<Self, Box<dyn Error>> {
+        Ok(Token { start, len: seq.len(), value: seq.to_owned() })
     }
 
     #[cfg(test)]
