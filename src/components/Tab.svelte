@@ -12,7 +12,7 @@
     }
 </script>
 
-<div class={"container " + (active ? "active" : "")}>
+<div class={"tab-container " + (active ? "active" : "")}>
     <div>{name}</div>
     <div class="button-container">
         <button on:click={close} class="close">
@@ -32,7 +32,7 @@
 </div>
 
 <style>
-    .container {
+    .tab-container {
         padding: 0.5rem;
         padding-left: 1rem;
         display: flex;

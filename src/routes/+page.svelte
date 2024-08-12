@@ -1,12 +1,16 @@
 <script lang="ts">
-    import './globals.css';
+    import "./globals.css";
     import Sidebar from "../components/Sidebar.svelte";
-    import Tabs from '../components/Tabs.svelte';
+    import TabList from "../components/TabList.svelte";
+    import Doc from "../components/Doc.svelte";
 </script>
 
 <div class="container">
     <Sidebar />
-    <Tabs />
+    <div class="right-container">
+        <TabList />
+        <Doc />
+    </div>
 </div>
 
 <style>
@@ -14,5 +18,11 @@
         display: flex;
         flex-direction: row;
         height: 100%;
+    }
+
+    .right-container {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
     }
 </style>

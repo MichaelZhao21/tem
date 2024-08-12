@@ -18,7 +18,7 @@ div {
 
 html, body {
     height: 100%;
-    background-color: #202020;
+    background-color: var(--background);
 }
 
 button {
@@ -30,4 +30,5 @@ button {
 
 :root {
     --primary: #B188D0;
+    --background: #202020;
 }

@@ -2,15 +2,12 @@
     import Tab from "./Tab.svelte";
 </script>
 
-<div class="container">
-    <div class="tab-list">
-        <Tab />
-    </div>
+<div class="tab-list">
+    <Tab />
 </div>
 
 <style>
-    .container {
-        height: 100%;
+    .tab-list-container {
         flex-grow: 1;
         display: flex;
         flex-direction: column;

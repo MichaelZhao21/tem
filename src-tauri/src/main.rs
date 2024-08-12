@@ -3,15 +3,15 @@
 
 mod temsync;
 
-// Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
+fn load_tags() -> Vec<String> {
+    let out = vec!["first".to_string(), "second".to_string(), "third".to_string()];
+    return out;
 }
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
+        .invoke_handler(tauri::generate_handler![load_tags])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 
