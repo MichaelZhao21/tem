@@ -14,6 +14,7 @@
 <style>
     .item {
         padding: 0.25rem 0;
+        font-size: 0.75rem;
         text-decoration: none;
     }
 

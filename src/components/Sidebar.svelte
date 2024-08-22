@@ -27,6 +27,6 @@
     .tags-container {
         display: flex;
         flex-direction: column;
-        padding-left: 1rem;
+        padding-left: 0.25rem;
     }
 </style>

@@ -32,7 +32,7 @@
         <button
             class="name"
             on:click={() => {
-                toggleList();
+                expanded = true;
                 activateDoc();
             }}
         >
@@ -62,8 +62,7 @@
     }
 
     .name {
-        margin: 0.5rem 0;
-        font-size: 1.25rem;
+        margin: 0;
         color: #949494;
         text-decoration: none;
     }
