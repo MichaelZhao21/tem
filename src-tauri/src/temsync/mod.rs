@@ -1,11 +1,11 @@
 use meyers::get_diff;
 use patch::{generate_and_write_patch, generate_patch, read_patch};
 
-mod token;
-mod tokenizer;
 mod edit;
 mod meyers;
 mod patch;
+mod token;
+mod tokenizer;
 
 // TEMP: To get rid of warnings -- this will not be used until we have server stuff setup TT
 pub fn main() {

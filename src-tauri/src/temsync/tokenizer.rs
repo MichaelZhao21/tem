@@ -44,7 +44,8 @@ pub fn parse_tokens(buffer: &str) -> Result<Vec<Token>, Box<dyn Error>> {
             || (char >= 0x61 && char <= 0x7A)     // a-z
             || (char >= 0xC0 && char <= 0xD6)     // À-Ö
             || (char >= 0xD8 && char <= 0xF6)     // Ø-ö
-            || (char >= 0xF8 && char <= 0x2AF)    // ø-ʯ
+            || (char >= 0xF8 && char <= 0x2AF)
+        // ø-ʯ
         {
             sb.push(char);
             continue;
