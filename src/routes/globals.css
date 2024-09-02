@@ -24,6 +24,7 @@ html, body {
 button {
     background-color: transparent;
     border: none;
+    outline: none;
     color: white;
     cursor: pointer;
 }
@@ -31,4 +32,8 @@ button {
 :root {
     --primary: #B188D0;
     --background: #202020;
+}
+
+::selection {
+    background-color: #aaaaaa;
 }
