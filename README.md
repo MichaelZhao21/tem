@@ -1,5 +1,8 @@
 # tem (Tagged Editor for Markdown)
 
+> [!IMPORTANT]  
+> This project is now discontinued. I originally wanted to make my own custom solution, but I have realized that using Obsidian + Git + a bunch of plugins can suffice for what I need. Will keep this repo here as I do have the custom version control system built, but this project will not be developed any longer.
+
 I wanted to build my own system for markdown text editing. I didn't want to use Electron due to performance issues, so I opted for a [Tauri](https://tauri.app/) application for a balance between ease of use and low-level performance.
 
 Although there are solutions out there (Google Drive, Obsidian, Vi), none of them were perfectly suited to my use case (Obsidian came close but it isn't open source sad face).
